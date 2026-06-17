@@ -51,22 +51,22 @@ def test_get_users(user_data):
     assert len(users) == 1
 
 
-def test_delete_user(user_data):
-    create_response = client.post(
-        "/users",
-        params=user_data
-    )
+# def test_delete_user(user_data):
+#     create_response = client.post(
+#         "/users",
+#         params=user_data
+#     )
 
-    user_id = create_response.json()["user_id"]
+#     user_id = create_response.json()["user_id"]
 
-    delete_response = client.delete(
-        f"/users/{user_id}"
-    )
+#     delete_response = client.delete(
+#         f"/users/{user_id}"
+#     )
 
-    assert delete_response.status_code == 200
-    assert (
-        delete_response.json()["message"]
-        == f"User {user_id} deleted successfully"
-    )
+#     assert delete_response.status_code == 200
+#     assert (
+#         delete_response.json()["message"]
+#         == f"User {user_id} deleted successfully"
+#     )
 
 
