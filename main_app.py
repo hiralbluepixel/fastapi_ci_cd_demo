@@ -5,6 +5,7 @@ data={}
 
 @app.get("/users")
 def get_user():
+    print("Data:", data)
     return data
 
 
